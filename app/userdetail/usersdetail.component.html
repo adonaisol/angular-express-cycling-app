@@ -1,0 +1,10 @@
+
+<div *ngIf="user">
+  Name: <strong>{{user.member.name}}</strong> <br/>
+  Phone Number: <strong>{{user.member.phone}}</strong> <br/>
+  Clubs:
+  <ul>   
+    <h5 *ngFor="let club of user.member.clubs">{{club.name}}</h5>
+  </ul>
+  
+</div>

@@ -1,0 +1,11 @@
+#latitude, #longitude, #num_members {
+    width: 80px !important;
+}
+.form-group {
+    padding-right: 30px;
+}
+.well {
+    padding: 5px;
+    padding-left: 15px;
+    margin-bottom: 10px;
+}

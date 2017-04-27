@@ -1,0 +1,26 @@
+<h1>
+    Create Club!
+</h1>
+<form [formGroup]="myForm" (ngSubmit)="submitForm(myForm)"> 
+    
+    <label for="name" >Name</label>
+    <input name= "name" type="text" [formControl]="myForm.controls['name']" #name /><br> 
+
+    <label for="phone" >Phone Number</label>
+    <input name= "phone" type="text" [formControl]="myForm.controls['phone']" #phone /><br> 
+
+    <label for="city" >City</label>
+    <input name= "city" type="text" [formControl]="myForm.controls['city']" #city /><br>
+
+    <label for="state" >State</label>
+    <input name= "state" type="text" [formControl]="myForm.controls['state']" #state /><br>
+
+    <label for="long" >Longitude</label>
+    <input name="long" type="text" [formControl]="myForm.controls['long']" #long/><br>
+
+    <label for="lati" >Latitude</label>
+    <input name="lati" type="text" [formControl]="myForm.controls['lati']" #lati/><br><br>
+
+        
+    <input type="submit" value="Create club"/>
+  </form>

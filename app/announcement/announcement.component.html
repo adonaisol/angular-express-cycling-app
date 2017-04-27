@@ -1,0 +1,17 @@
+<h1>  Create Announcement! </h1>
+<form [formGroup]="myForm" (ngSubmit)="submitForm(myForm)">
+    
+    <label for="title" >Title</label>
+    <input name= "title" type="text" [formControl]="myForm.controls['title']" #title /><br>
+
+    <label for="msg" >Announcement</label>
+    <input name= "msg" type="text" [formControl]="myForm.controls['msg']" #msg /><br>  
+    <div>
+        <label for="clubs">Clubs</label>
+        <select name="clubs" [formControl]="myForm.controls['club']">
+            <option *ngFor="let club of clubs" value="{{club.name}}">{{ club.name }}</option>
+        </select>
+    </div>       
+    <input type="submit" value="Add Announcement"/>
+   
+</form>

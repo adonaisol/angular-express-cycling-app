@@ -1,0 +1,21 @@
+<h5 class="" *ngIf="auth.authenticated()">{{userLocation.city}}, {{userLocation.state}}</h5>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header navbar-inverted">
+      <a class="navbar-brand" href="#">My Cycling App</a>
+      
+      <button class="btn btn-default btn-margin pull-right" (click)="auth.login()" *ngIf="!auth.authenticated()">Log In</button>
+      <button class="btn btn-default btn-margin pull-right" (click)="auth.logout()" *ngIf="auth.authenticated()">Log Out</button>
+      
+      <img *ngIf="auth.authenticated()" src="{{userDetails.picture}}" class="img-responsive pull-right" />
+      <div *ngIf="auth.authenticated()" class="pull-right">Welcome <i>{{userDetails.name}}</i></div>
+      
+      <!--<button class="btn btn-primary btn-margin" (click)="auth.printData()" *ngIf="auth.authenticated()">User Details</button>-->
+    </div>
+  </div>
+</nav>
+
+<h4 *ngIf="!auth.authenticated()">You are not logged in, please click 'Log in' button to login</h4>
+<main >
+  <router-outlet></router-outlet>
+</main>

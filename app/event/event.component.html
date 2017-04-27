@@ -1,0 +1,28 @@
+<h1>
+    Create Event!
+</h1>
+<form [formGroup]="myForm" (ngSubmit)="submitForm(myForm)">
+    
+    <label for="name" >Name</label>
+    <input name= "name" type="text" [formControl]="myForm.controls['name']" #name /><br>   
+    
+    <label for="strlat" >Start</label>
+    <label for="strlat" >Latitude</label>
+    <input name="strlat" type="text" [formControl]="myForm.controls['strlat']" #strlat/>
+    <label for="strlong" >Longitude</label>
+    <input name="strlong" type="text" [formControl]="myForm.controls['strlong']" #strlong/><br>
+
+    <label for="endlat" >End</label>
+    <label for="endlat" >Latitude</label>
+    <input name="endlat" type="text" [formControl]="myForm.controls['endlat']" #endlat/>
+    <label for="endlong" >Longitude</label>
+    <input name="endlong" type="text" [formControl]="myForm.controls['endlong']" #endlong/><br>  
+
+    <div>
+        <label for="clubs">Clubs</label>
+        <select name="clubs" [formControl]="myForm.controls['club']">
+            <option *ngFor="let club of clubs" value="{{club.name}}">{{ club.name }}</option>
+        </select>
+    </div>
+    <input type="submit" value="Add Event"/>
+  </form>

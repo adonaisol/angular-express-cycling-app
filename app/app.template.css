@@ -1,0 +1,22 @@
+.navbar-header{
+    float: none;
+}
+
+.navbar-header *{
+    vertical-align: middle;
+    margin-left: 5px;
+    margin-right: 5px;
+    max-height: 50px;
+}
+.navbar-header div{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 15px;
+    text-align: right;
+}
+h5 {
+    text-align: left;
+    color: white;
+    /*position: fixed;
+    z-index: 1000;*/
+}

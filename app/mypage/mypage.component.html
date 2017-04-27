@@ -1,0 +1,13 @@
+<input type="hidden" #id value="C123"/>
+    
+    <!--<a (click)="users()">Users</a>
+    <a (click)="createEvent()" >Create Event</a>
+    <a (click)="createAnnouncement()" >Post Announcement</a>
+    <a (click)="createClub()" >Create Club</a>-->
+    | 
+    <a [routerLink]="['/users']">Users</a> | 
+    <a [routerLink]="['/event/create', id.value]" >Create Event</a> | 
+    <a [routerLink]="['/announcement/create', id.value]" >Post Announcement</a> | 
+    <a [routerLink]="['/create/club', id.value]" >Create Club</a>
+    
+<router-outlet></router-outlet>

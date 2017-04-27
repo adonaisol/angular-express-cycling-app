@@ -1,0 +1,35 @@
+
+<div class="text-center well">
+  <form class="form-inline">
+    <div class="form-group">  
+      <label for="club_name">Name: </label>
+      <input type="text" class="form-control" id="club_name" name="club_name" placeholder="Club Name" [(ngModel)]="club_name">
+    </div>
+    <strong>Location: </strong> 
+    <div class="form-group">
+      <input type="email" class="form-control" id="longitude" name="long" placeholder="Longitude" [(ngModel)]="long">
+    <!--</div>
+    <div class="form-group">-->
+      <input type="email" class="form-control" id="latitude" name="lat" placeholder="Latitude" [(ngModel)]="lat">
+      <button type="button" class="btn btn-sm btn-default" (click)='myLocation()'>My Location</button>
+    </div>
+    <div class="form-group">  
+      <label for="num_members">Members: </label>
+      <input type="text" class="form-control" id="num_members" name="num_members" placeholder="Num">
+    </div>
+    <button type="submit" (click)='search()' class="btn btn-primary">Search</button>
+  </form>
+</div>
+
+<div class="well" *ngIf="clubresults.length"> 
+  <h3>Search Results</h3>
+ 
+  <table class="table table-striped">
+      <tr *ngFor="let item of clubresults">
+        <td>{{item.name}}</td>
+      <td *ngIf="item.location">{{item.location.city}}, {{item.location.state}}</td>
+      <button class="btn btn-info pull-right">Join</button></tr>
+      <!--<tr><td>{{long}}</td><button *ngIf="lat" class="btn btn-info pull-right">Join</button></tr>-->
+  </table>
+ 
+</div>
